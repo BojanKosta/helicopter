@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="register-page">
+<h1 class="regtitle">Welcome to registration page</h1>
+<br>
+<a class="btn btn-info" href="login.html">Log In</a>
+<br>
+<br>
+ <div class="registerForm loginback">
+     <form class = "userform" action="/player" method="post">
+         <label for="name">Full name: </label>
+         <input id = "name" class = "name" type="text" name="name" required><br><br>
+         <label for="password">Password: </label>
+         <input id = "password" class = "password" type="password" name="password" required><br><br>
+         <button class = "btn btn-info" type="submit">Register</button>
+     </form>
+ </div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/adduser.js" charset="utf-8"></script>
+</body>
+
+</html>
