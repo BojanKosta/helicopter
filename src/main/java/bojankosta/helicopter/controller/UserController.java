@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.ArrayList;
 
 @RestController
+@CrossOrigin
 @RequestMapping
 public class UserController {
 
@@ -47,5 +49,10 @@ public class UserController {
 
         return scoreBoardService.save(scoreBoard);
 
+    }
+
+    @GetMapping("/getscore")
+    public ArrayList<ScoreBoard> getScoreBoard () {
+        return scoreBoardService.getScoreBoard();
     }
 }

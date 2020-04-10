@@ -42,12 +42,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.gif",
                         "/**/*.svg",
                         "/**/*.jpg",
-                        "/**/*.html",
                         "/**/*.css",
                         "/**/*.js",
+                        "/index.html",
+                        "/register.html",
                         "/player"
                 ).permitAll()
-                .antMatchers("/playing", "/score")
+                .antMatchers("/playing", "/score", "/home.html")
                 .hasAnyRole("USER", "ADMIN")
                 .anyRequest().authenticated()
                 .and()

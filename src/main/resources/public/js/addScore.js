@@ -4,7 +4,7 @@ const addScore = (score) => {
     axios.post('http://localhost:8080/playing', score)
     .then(response => {
       const player = response.data;
-      location.replace("login.html")
+      console.log(score);
     })
     .catch(error => console.error(error));
 
@@ -26,7 +26,6 @@ const addScore = (score) => {
         .then(response => {
           const player = response.data;
           console.log(player);
-    //      location.replace("login.html")
         })
         .catch(error => console.error(error));
 
@@ -40,3 +39,16 @@ const addScore = (score) => {
              bestScore(score);
 
         });
+
+
+
+        const printScore = () => {
+            axios.get('http://localhost:8080/getscore')
+            .then(response => {
+              const player = response.data;
+              console.log(player);
+            })
+            .catch(error => console.error(error));
+
+            };
+            printScore();

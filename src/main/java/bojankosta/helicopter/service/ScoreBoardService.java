@@ -15,6 +15,10 @@ public class ScoreBoardService {
     private ScoreBoardRepository scoreBoardRepository;
 
 
+    public ArrayList<ScoreBoard> getScoreBoard() {
+        return (ArrayList<ScoreBoard>) scoreBoardRepository.findAll();
+    }
+
     public ScoreBoard save (ScoreBoard scoreBoard) {
         ArrayList<ScoreBoard> scores = new ArrayList<>();
         scores  = (ArrayList<ScoreBoard>) scoreBoardRepository.findAll();
