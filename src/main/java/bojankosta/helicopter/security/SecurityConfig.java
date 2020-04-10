@@ -44,16 +44,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.jpg",
                         "/**/*.html",
                         "/**/*.css",
-                        "/**/*.js"
+                        "/**/*.js",
+                        "/player"
                 ).permitAll()
-                .antMatchers("/playing", "/score", "/player")
+                .antMatchers("/playing", "/score")
                 .hasAnyRole("USER", "ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login.html")
+                .loginPage("/index.html")
                 .loginProcessingUrl("/perform_login")
-                .defaultSuccessUrl("/index.html", true)
+                .defaultSuccessUrl("/home.html", true)
                 .and().logout().permitAll();
 
 

@@ -1,89 +1,39 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <title>Articles</title>
 
-    <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- JQuery JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Log in with your credentials</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montez|Montserrat|Philosopher|Ubuntu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Monoton|PT+Serif|Satisfy&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type= "text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type= "text/css" href="/css/style.css">
 
 </head>
 
 <body>
-  <section id="title">
 
-    <div class="container-fluid">
+<div class="register-page">
+<h1 class="regtitle">Log in to play game</h1>
+<br>
 
-     <nav id="navbar" class="navbar fixed-top navbar-light bg-light navbar-expand-sm">
+<a class = "btn  btn-info " href="register.html">Register</a>
 
-    <img class="my-logo" src="" alt="">
-
-    <a class="navbar-brand" href="profile.html"></a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/logout">Log in</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" id="register" href="register.html">Register</a>
-        </li>
-        <!-- <li class="nav-item active">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#contacts">Contacts</a>
-        </li> -->
-      </ul>
-    </div>
-  </nav>
-</div>
-</section>
-
-<div class="bodi">
-  <div class="back">
-<!--   <div class="navi1">-->
-<!--       <div class = "user-logged">-->
-<!--           <a class = "btn btn-info login-logout" href="/logout">Log in</a>-->
-<!--           <a class = "register btn btn-info" href="register.html">Register</a>-->
-<!--       </div>-->
-
-<!--</div>-->
-  <h1 class="title" >Welcome  to  my  IT  forum</h1>
-  <br>
-</div>
-  <div class="articles">
-<!--       <div class = "card"><div><img src="%url%"></div>-->
-<!--      <div class = "article_item" id = "arc-%id%"><h3 class = "user"><p class = "autor">Author</p>%username%</h3><br>-->
-<!--      <h4 class = "message">%message%</h4>'-->
-<!--      <br><h4 class = "time">Created at: %time%</h4></div>-->
-    <button type="button" class="score">Click Me!</button>
-    <button type="button" class="list">ADD Me!</button>
-
-  </div>
-      <footer>© 2020 Bojan Todorovic. All rights reserved.</footer>
-  </div>
+<br>
+<br>
+ <div class="registerForm loginback">
+     <form  method="POST" action="perform_login" class = "userform">
+         <label for="username">Username: </label>
+         <input id = "username" class = "username" type="text" name="username" required><br><br>
+         <label for="password">Password: </label>
+         <input id = "password" class = "password" type="password" name="password" required><br><br>
+         <button class="btn  btn-info " type="submit">Log In</button>
+     </form>
+ </div>
 </div>
 
+<!-- /container -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="js/addScore.js" charset="utf-8"></script>
-
-</body>
-
 </html>
