@@ -53,6 +53,7 @@ public class UserController {
 
     @GetMapping("/getscore")
     public ArrayList<ScoreBoard> getScoreBoard () {
+
         return scoreBoardService.getScoreBoard();
     }
 }

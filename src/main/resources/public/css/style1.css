@@ -45,5 +45,10 @@ body {
 	}
 	#user_action{
 		position:absolute;
-		margin: 200px;
+		margin: 50px;
+	}
+
+	p {
+	margin: 5px;
+	padding: 0;
 	}

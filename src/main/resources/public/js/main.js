@@ -207,13 +207,33 @@ window.setTimeout(function(){
                     axios.get('http://localhost:8080/getscore')
                     .then(response => {
                       const player = response.data;
-                      console.log(response.data);
+                      console.log(player);
+                        var rank = 1;
+                      const createList = (score) => {
+
+                            var newHtml;
+                            const element = document.getElementById("user_action");
+
+                            var html = '<p class = "name-player">%rank% Player: %name%   Score: %score%</p>';
+
+                          newHtml = html.replace('%name%', score.name);
+                          newHtml = newHtml.replace('%score%', score.score);
+                          newHtml = newHtml.replace('%rank%', rank);
+
+                        rank++;
+                        element.insertAdjacentHTML('beforeend', newHtml);
+                      }
+                      player.sort((a, b) => a.score - b.score);
+                      for (var i = 9; i>=0; i--){
+                      createList(player[i]);
+                      }
                 })
                 .catch(error => console.error(error));
                 };
-printScore();
 
- }, 3000);
+                 printScore();
+
+ }, 2000);
 
 
 
@@ -221,4 +241,5 @@ printScore();
         myGameArea.clear();
 		document.getElementById("user_action").style.display="block";
 		document.getElementById("message").innerHTML="BOOM! Your score is "+points;
+		document.getElementById("top").innerHTML="Top 10 scores";
     }

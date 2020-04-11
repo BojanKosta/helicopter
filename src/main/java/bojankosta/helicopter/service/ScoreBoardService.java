@@ -49,23 +49,50 @@ public class ScoreBoardService {
 
             ScoreBoard scoreBoard1 = new ScoreBoard();
             scoreBoard1.setScore(0);
-            scoreBoard1.setName("No score yet");
+            scoreBoard1.setName("No player yet");
 
             ScoreBoard scoreBoard2 = new ScoreBoard();
             scoreBoard2.setScore(0);
-            scoreBoard2.setName("No score yet");
+            scoreBoard2.setName("No player yet");
 
             ScoreBoard scoreBoard3 = new ScoreBoard();
             scoreBoard3.setScore(0);
-            scoreBoard3.setName("No score yet");
+            scoreBoard3.setName("No player yet");
 
             ScoreBoard scoreBoard4 = new ScoreBoard();
             scoreBoard4.setScore(0);
-            scoreBoard4.setName("No score yet");
+            scoreBoard4.setName("No player yet");
+
+            ScoreBoard scoreBoard5 = new ScoreBoard();
+            scoreBoard5.setScore(0);
+            scoreBoard5.setName("No player yet");
+
+            ScoreBoard scoreBoard6 = new ScoreBoard();
+            scoreBoard6.setScore(0);
+            scoreBoard6.setName("No player yet");
+
+            ScoreBoard scoreBoard7 = new ScoreBoard();
+            scoreBoard7.setScore(0);
+            scoreBoard7.setName("No player yet");
+
+            ScoreBoard scoreBoard8 = new ScoreBoard();
+            scoreBoard8.setScore(0);
+            scoreBoard8.setName("No player yet");
+
+            ScoreBoard scoreBoard9 = new ScoreBoard();
+            scoreBoard9.setScore(0);
+            scoreBoard9.setName("No player yet");
 
             scoreBoardRepository.save(scoreBoard1);
             scoreBoardRepository.save(scoreBoard2);
             scoreBoardRepository.save(scoreBoard3);
+            scoreBoardRepository.save(scoreBoard4);
+            scoreBoardRepository.save(scoreBoard5);
+            scoreBoardRepository.save(scoreBoard6);
+            scoreBoardRepository.save(scoreBoard7);
+            scoreBoardRepository.save(scoreBoard8);
+            scoreBoardRepository.save(scoreBoard9);
+
 
             return scoreBoardRepository.save(scoreBoard4);
 
