@@ -15,4 +15,8 @@ public class AuthoritiesService {
     public Authorities saveAuthorities (Authorities authorities){
         return authoritiesRepository.save(authorities);
     }
+
+    public Authorities getAuthorities (String name){
+        return authoritiesRepository.findByUsername(name);
+    }
 }

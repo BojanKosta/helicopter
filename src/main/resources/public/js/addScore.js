@@ -1,4 +1,21 @@
 
+const createList = (score) => {
+
+      var newHtml;
+      const element = document.querySelector('.sco');
+      console.log(score);
+
+      var html = '<div class = "cards">'
+      +'<h2 class = "name">%name%</h2>'
+      +'<h4 class = "score">%score%</h4>'
+      +'</div>';
+
+    newHtml = html.replace('%name%', score.name);
+    newHtml = newHtml.replace('%score%', score.score);
+
+  element.insertAdjacentHTML('beforeend', newHtml);
+}
+
 // add best score to player if it is bigger
 const addScore = (score) => {
     axios.post('http://localhost:8080/playing', score)
@@ -47,6 +64,33 @@ const addScore = (score) => {
             .then(response => {
               const player = response.data;
               console.log(player);
+
+    const createList = (score) => {
+
+      var newHtml;
+      const element = document.querySelector('.sco');
+      console.log(score);
+
+      var html = '<div class = "cards">'
+      +'<h2 class = "name">%name%</h2>'
+      +'<h4 class = "score">%score%</h4>'
+      +'</div>';
+
+    newHtml = html.replace('%name%', score.name);
+    newHtml = newHtml.replace('%score%', score.score);
+
+  element.insertAdjacentHTML('beforeend', newHtml);
+}
+           player.forEach(createList);
+
+//              const arr = player.map(post => {
+//                          return createList(post);
+//                          });
+
+//              for(var i =0; i<player.size; i++){
+//                createList(player[i]);
+//                console.log(player[i].name);
+//              }
             })
             .catch(error => console.error(error));
 

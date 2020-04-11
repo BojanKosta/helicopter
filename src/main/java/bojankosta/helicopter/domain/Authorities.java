@@ -20,6 +20,9 @@ public class Authorities {
         this.authority = "ROLE_USER";
     }
 
+    public Authorities() {
+    }
+
     public Long getId() {
         return id;
     }

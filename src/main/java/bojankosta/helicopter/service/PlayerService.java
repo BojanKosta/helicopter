@@ -21,10 +21,14 @@ public class PlayerService {
 
     public Player savePlayer (Player player) {
 
-        Authorities authority = new Authorities(player.getUsername());
-        authoritiesService.saveAuthorities(authority);
-        player.setPassword(cryptPasswordEncoder.encode(player.getPassword()));
-
+        Authorities exist = authoritiesService.getAuthorities(player.getUsername());
+        if(exist ==null) {
+            System.out.println(exist);
+            Authorities authority = new Authorities(player.getUsername());
+            authoritiesService.saveAuthorities(authority);
+            player.setPassword(cryptPasswordEncoder.encode(player.getPassword()));
+            return playerRepository.save(player);
+        }
         return playerRepository.save(player);
     }
 

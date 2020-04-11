@@ -26,8 +26,8 @@ public class UserController {
     public Player savePlayer (@RequestBody Player player) {
 
         System.out.println(player.getUsername());
-        playerService.savePlayer(player);
-        return player;
+
+        return playerService.savePlayer(player);
     }
 
     @PostMapping("/playing")
